@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="./main.js"></script>
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section class="dashboard-container">
+    <div class="menu">
+      <div class="user-profile">
+        <div class="user-avatar">
+          <img src="./images/image-jeremy.png" alt="user avatar">
+        </div>
+        <div class="user-report">
+          <p class="user-for">
+            Report for
+          </p>
+          <div class="user-name-container">
+            <h1 class="user-name first-name">Jeremy </h1>
+            <h1 class="user-name">Robson</h1>
+          </div>
+        </div>
+      </div>  
+      <div class="menu-options">
+        <button id="daily" data-option="daily">Daily</button>
+        <button id="weekly" data-option="weekly">Weekly</button>
+        <button id="monthly" data-option="monthly">Monthly</button>
+      </div>
+    </div>
+
+    <section class="time-tracking-activity-card work">
+      <div class="time-tracking-activity-card-background">
+      </div>
+      <div class="time-tracking-activity-card-content">
+        <header>
+          <h2>Work</h2>
+          <div class="activity-card-option">
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+        </header>
+        <main>
+          <h3 data-acitvity="work" data-timeframe="current">32hrs</h3>
+          <p>Last Week - 
+            <span data-acitvity="work" data-timeframe="previous">36hrs</span>
+          </p>
+        </main>
+      </div>
+    </section>
+
+    <section class="time-tracking-activity-card play">
+      <div class="time-tracking-activity-card-background">
+      </div>
+      <div class="time-tracking-activity-card-content">
+        <header>
+          <h2>Play</h2>
+          <div class="activity-card-option">
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+        </header>
+        <main>
+          <h3 data-acitvity="play" data-timeframe="current">10hrs</h3>
+          <p>Last Week - 
+            <span data-acitvity="play" data-timeframe="previous">8hrs</span>
+          </p>
+        </main>
+      </div>
+    </section>
+
+    <section class="time-tracking-activity-card study">
+      <div class="time-tracking-activity-card-background">
+      </div>
+      <div class="time-tracking-activity-card-content">
+        <header>
+          <h2>Study</h2>
+          <div class="activity-card-option">
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+        </header>
+        <main>
+          <h3 data-acitvity="study" data-timeframe="current">4hrs</h3>
+          <p>Last Week - 
+            <span data-acitvity="study" data-timeframe="previous">7hrs</span>
+          </p>
+        </main>
+      </div>
+    </section>
+
+    <section class="time-tracking-activity-card exercise">
+      <div class="time-tracking-activity-card-background">
+      </div>
+      <div class="time-tracking-activity-card-content">
+        <header>
+          <h2>Exercise</h2>
+          <div class="activity-card-option">
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+        </header>
+        <main>
+          <h3 data-acitvity="exercise" data-timeframe="current">4hrs</h3>
+          <p>Last Week - 
+            <span data-acitvity="exercise" data-timeframe="previous">5hrs</span>
+          </p>
+        </main>
+      </div>
+    </section>
+
+    <section class="time-tracking-activity-card social">
+      <div class="time-tracking-activity-card-background">
+      </div>
+      <div class="time-tracking-activity-card-content">
+        <header>
+          <h2>Social</h2>
+          <div class="activity-card-option">
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+        </header>
+        <main>
+          <h3 data-acitvity="social" data-timeframe="current">5hrs</h3>
+          <p>Last Week - 
+            <span data-acitvity="social" data-timeframe="previous">10hrs</span>
+          </p>
+        </main>
+      </div>
+    </section>
+
+    <section class="time-tracking-activity-card self-care">
+      <div class="time-tracking-activity-card-background">
+      </div>
+      <div class="time-tracking-activity-card-content">
+        <header>
+          <h2>Self Care</h2>
+          <div class="activity-card-option">
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+        </header>
+        <main>
+          <h3 data-acitvity="selfcare" data-timeframe="current">2hrs</h3>
+          <p>Last Week - 
+            <span data-acitvity="selfcare" data-timeframe="previous">2hrs</span>
+          </p>
+        </main>
+      </div>
+    </section>
+
+  </section>
+  
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">percydocomo</a>.
+  </div>
+</body>
+</html>

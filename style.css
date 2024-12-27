@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* ROOT */
+
+:root {
+  /* PRIMARY COLORS */
+
+  --primary-blue: hsl(246, 80%, 60%);
+  --primary-light-red-work: hsl(15, 100%, 70%);
+  --soft-blue-play: hsl(195, 74%, 62%);
+  --light-red-study: hsl(348, 100%, 68%);
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --soft-orange-self-care: hsl(43, 84%, 65%);
+
+  /* NEUTRAL COLORS */
+
+  --neutral-very-dark-blue: hsl(226, 43%, 10%);
+  --neutral-dark-blue: #1c1f4a;
+  --neutral-desaturated-blue: hsl(235, 45%, 61%);
+  --neutral-pale-blue: hsl(236, 100%, 87%);
+
+  /* FONT FAMILY */
+
+  --ff-rubik: "Rubik", sans-serif;
+
+  /* FONT WEIGHTS */
+
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-bold: 500;
+}
+
+/* RESET */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* GENERAL STYLES */
+
+body {
+  font-family: var(--ff-rubik);
+  font-size: 18px;
+  background-color: var(--neutral-very-dark-blue);
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+}
+
+/* DASHBOARD CONTAINER */
+
+.dashboard-container {
+  width: 100%;
+  height: auto;
+  background-color: var(--neutral-very-dark-blue);
+  color: var(--neutral-pale-blue);
+  padding: 4.5em 1.4em;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.38em;
+}
+
+/* MENU */
+
+.menu {
+  background-color: var(--neutral-dark-blue);
+  border-radius: 0.7em;
+}
+
+/* USER PROFILE */
+
+.user-profile {
+  border-radius: 0.7em;
+  padding: 1.57em;
+  background-color: var(--primary-blue);
+
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.user-avatar {
+  width: 27.2%;
+}
+
+.user-avatar img {
+  width: 100%;
+  border: 0.2em solid white;
+  border-radius: 50%;
+}
+
+.user-for {
+  font-size: 0.8em;
+  font-weight: var(--fw-bold);
+}
+
+.user-name-container {
+  display: flex;
+}
+
+.user-name {
+  color: white;
+  font-size: 1.34em;
+  font-weight: var(--fw-light);
+}
+
+.first-name {
+  margin-right: 0.5em;
+}
+
+/* MENU OPTIONS */
+
+.menu-options {
+  padding: 1.3em 1em 1.4em 1.9em;
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+button {
+  font-family: var(--ff-rubik);
+  font-size: 0.95em;
+  color: var(--neutral-desaturated-blue);
+  background-color: var(--neutral-dark-blue);
+  border: none;
+}
+
+button:hover,
+button:focus {
+  color: white;
+}
+
+/* TIME TRACKING ACTIVITY CARD */
+
+.time-tracking-activity-card {
+  background-color: var(--neutral-dark-blue);
+  color: white;
+  border-radius: 0.7em;
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  background-position: 92% -0.5em;
+  padding-top: 0.04em;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 2.1em 1fr;
+}
+
+/* TIME TRACKING ACTIVITY CARD BACKGROUND */
+
+.work {
+  background-color: var(--primary-light-red-work);
+  background-image: url(./images/icon-work.svg);
+}
+
+.play {
+  background-color: var(--soft-blue-play);
+  background-image: url(./images/icon-play.svg);
+}
+
+.study {
+  background-color: var(--light-red-study);
+  background-image: url(./images/icon-study.svg);
+}
+
+.exercise {
+  background-color: var(--lime-green-exercise);
+  background-image: url(./images/icon-exercise.svg);
+}
+
+.social {
+  background-color: var(--violet-social);
+  background-image: url(./images/icon-social.svg);
+}
+
+.self-care {
+  background-color: var(--soft-orange-self-care);
+  background-image: url(./images/icon-self-care.svg);
+}
+
+/* TIME TRACKING ACTIVITY CARD CONTENT */
+
+.time-tracking-activity-card-content {
+  padding: 1.2em 1.2em 1.35em 1.2em;
+  border-radius: 0.7em;
+  background-color: var(--neutral-dark-blue);
+}
+
+.time-tracking-activity-card-content:hover {
+  background-color: #474da8;
+}
+
+header,
+main {
+  height: 1.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  font-size: 1em;
+  font-weight: var(--fw-bold);
+}
+
+.activity-card-option {
+  align-self: start;
+}
+
+.activity-card-option img:hover {
+  filter: brightness(200%);
+}
+
+main {
+  height: 2.2em;
+  margin-top: 0.15em;
+}
+
+main h3 {
+  font-size: 1.75em;
+  font-weight: var(--fw-light);
+  align-self: start;
+}
+
+main p {
+  font-size: 0.83em;
+  color: var(--neutral-pale-blue);
+  font-weight: var(--fw-normal);
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 374px) {
+  .dashboard-container {
+    width: 90%;
+  }
+
+  .user-profile {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  /* DASHBOARD CONTAINER */
+
+  .dashboard-container {
+    padding: 2.8em;
+    grid-template-columns: repeat(auto-fit, minmax(13.5em, 1fr));
+  }
+
+  /* MENU */
+
+  .menu {
+    grid-row: 1 / span 2;
+  }
+
+  .user-profile {
+    padding-bottom: 5em;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .user-name-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .user-name {
+    font-size: 2.34em;
+  }
+
+  .menu-options {
+    flex-direction: column;
+    align-items: start;
+    gap: 1em;
+  }
+}
+
+@media screen and (min-width: 850px ) {
+  /* DASHBOARD CONTAINER */
+
+  .dashboard-container {
+    padding: 9em 9.2em;
+  }
+
+  main {
+    height: 6.3em;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    gap: 0.3em;
+  }
+
+  main h3 {
+    font-size: 3.1em;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  /* DASHBOARD CONTAINER */
+
+  .dashboard-container {
+    max-width: 1440px;
+    padding: 11em 9.2em;
+  }
+
+  /* USER PROFILE */
+
+  .user-profile {
+    border-radius: 0.7em;
+    padding: 1.8em 1.5em 4.2em 1.5em;
+    background-color: var(--primary-blue);
+
+    gap: 1.95em;
+  }
+
+  .user-avatar {
+    width: 44%;
+  }
+
+  .user-avatar img {
+    width: 100%;
+    border: 0.2em solid white;
+    border-radius: 50%;
+  }
+
+  /* MENU OPTIONS */
+
+.menu-options {
+    padding-bottom: 0em;
+  
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* TIME TRACKING ACTIVITY CARD */
+
+  .time-tracking-activity-card {
+    padding-top: 0.4em;
+  }
+
+  /* TIME TRACKING ACTIVITY CARD CONTENT */
+
+  .time-tracking-activity-card-content {
+    padding: 1.3em 1.2em 0 1.2em;
+  }
+   
+  main p {
+    font-weight: var(--fw-bold);
+  }
+}
